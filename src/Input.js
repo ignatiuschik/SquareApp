@@ -1,13 +1,14 @@
 import React from 'react'
 
-const Input = () => {
+const Input = ({ color, setColor, handleSubmit }) => {
   return (
-    <form action="">
-        <label htmlFor=""></label>
+    <form onSubmit={(e) =>(e.preventDefault())}>
+        <label htmlFor="">Enter Color of Choice</label>
         <input 
             type="text"
-            required
-            placeholder='Enter Color of Choice'    
+            placeholder='Enter Color of Choice'  
+            value={color}
+            onChange={(e => setColor(e.target.value))}  
         />
     </form>
   )

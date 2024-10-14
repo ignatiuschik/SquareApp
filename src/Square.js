@@ -1,8 +1,9 @@
 import React from 'react'
 
-const Square = () => {
+const Square = ({color}) => {
+
   return (
-    <div className='square'>Square</div>
+    <div className='square' style={{backgroundColor:color}}>{color === "black" ? color = "white": color }</div>
   )
 }
 
