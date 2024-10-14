@@ -12,7 +12,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 code {
@@ -32,6 +32,7 @@ div {
   margin-top: 2rem;
   width: 200px;
   height: 200px;
+  border-radius: 10%;
   border: 1px solid red;
 }
 
@@ -40,8 +41,21 @@ form label {
   left: -9990px;
 }
 
-form input {
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+
+
+form input,
+form button {
   font-size: 1rem;
   width: 200px;
 }
+
 

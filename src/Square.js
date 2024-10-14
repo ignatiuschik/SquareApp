@@ -1,9 +1,12 @@
 import React from 'react'
 
-const Square = ({color}) => {
+const Square = ({colorValue, hexValue,isDarkColor}) => {
 
   return (
-    <div className='square' style={{backgroundColor:color}}>{color === "black" ? color = "white": color }</div>
+    <div className='square' style={{backgroundColor:colorValue, color: isDarkColor?"white": "black"}}>        
+        <p>{colorValue ? colorValue: "Empty Color Value"}</p>
+        <p>{hexValue ? hexValue: null}</p>
+    </div>
   )
 }
 

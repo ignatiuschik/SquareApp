@@ -4,25 +4,23 @@ import Input from './Input';
 import { useState } from 'react';
 
 function App() {
- const [color, setColor] = useState("");
-
- const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!color)
-    setColor('');
-
- }
-
+ const [colorValue, setColorValue] = useState("");
+ const [hexValue, setHexValue] = useState("");
+ const [isDarkColor, setIsDarkColor] = useState(true);
   return (
     <div className="App">
       <Square 
-        color = {color}
+        colorValue = {colorValue}
+        hexValue = {hexValue}
+        isDarkColor = {isDarkColor}
       />
       
       <Input 
-        color = {color}
-        setColor = {setColor}
-        handleSubmit={handleSubmit}
+        colorValue = {colorValue}
+        setColorValue = {setColorValue}
+        setHexValue = {setHexValue}
+        isDarkColor = {isDarkColor}
+        setIsDarkColor={setIsDarkColor}
       />
     </div>
   );
